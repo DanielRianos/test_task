@@ -24,10 +24,10 @@ FROM country_code;
 
 -- Create temporaty table: 
 
+-- Apprach 1:
+
 CREATE TEMPORARY TABLE temp_historical_gdp AS
 SELECT * FROM historical_gdp;
-
--- Add the 'code' column to later assign it as the Primary Key
 
 ALTER TABLE temp_historical_gdp
 ADD COLUMN code VARCHAR(3);
@@ -39,6 +39,19 @@ WHERE temp_historical_gdp.country = country_code.country;
 
 SELECT *
 FROM temp_historical_gdp;
+
+-- INNER JOIN APPROACH: 
+
+--Approach 2:
+
+CREATE TEMPORARY TABLE new_temp_historical_gdp AS
+SELECT historical_gdp.*, country_code.code
+FROM historical_gdp
+INNER JOIN country_code 
+USING(country);
+
+SELECT *
+FROM new_temp_historical_gdp;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
