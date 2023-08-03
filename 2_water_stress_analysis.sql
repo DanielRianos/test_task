@@ -7,7 +7,7 @@
 SELECT *
 FROM historical_gdp
 ORDER BY random()
-limit 5;
+LIMIT 5;
 
 -- B. Extract country country code  ('code' column) from country_code table:
 
@@ -17,7 +17,7 @@ LIMIT 5;
 
 -- Rank the column length (descending) to identify the proper length of the 'code' column
 
-SELECT country, code, LENGTH(code) as code_lengh,
+SELECT country, code, LENGTH(code) AS code_lengh,
 ROW_NUMBER() 
 OVER (ORDER BY LENGTH(code) DESC) AS rank
 FROM country_code;
@@ -55,7 +55,7 @@ FROM new_temp_historical_gdp;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
-SELECT DISTINCT(code) as no_code_entities
+SELECT DISTINCT(code) AS no_code_entities
 FROM temp_historical_gdp
 WHERE code IS NULL;
 
@@ -95,7 +95,7 @@ ADD PRIMARY KEY (code);
 SELECT *
 FROM historical_gdp_per_capita
 ORDER BY random()
-limit 5;
+LIMIT 5;
 
 -- B. Extract country country code ('code' column) from country_code table:
 
@@ -123,7 +123,7 @@ FROM temp_historical_gdp_per_capita;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
-SELECT DISTINCT(code) as no_code_entities
+SELECT DISTINCT(code) AS no_code_entities
 FROM temp_historical_gdp_per_capita
 WHERE code IS NULL;
 
@@ -162,7 +162,7 @@ ADD PRIMARY KEY (code);
 SELECT *
 FROM world_population
 ORDER BY random()
-limit 5;
+LIMIT 5;
 
 -- B. Extract country country code ('code' column) from country_code table:
 
@@ -190,7 +190,7 @@ FROM temp_world_population;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
-SELECT DISTINCT(code) as no_code_entities
+SELECT DISTINCT(code) AS no_code_entities
 FROM temp_world_population
 WHERE code IS NULL;
 
@@ -229,7 +229,7 @@ ADD PRIMARY KEY (code);
 SELECT *
 FROM water_stress
 ORDER BY random()
-limit 5;
+LIMIT 5;
 
 -- Create temporaty table: 
 
@@ -257,7 +257,7 @@ FROM temp_water_stress;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
-SELECT DISTINCT(code) as no_code_entities
+SELECT DISTINCT(code) AS no_code_entities
 FROM temp_water_stress
 WHERE code IS NULL;
 
@@ -296,7 +296,7 @@ ADD PRIMARY KEY (code);
 SELECT *
 FROM water_domestic
 ORDER BY random()
-limit 5;
+LIMIT 5;
 
 -- B. Extract country country code ('code' column) from country_code table:
 
@@ -326,7 +326,7 @@ FROM temp_water_domestic;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
-SELECT DISTINCT(code) as no_code_entities
+SELECT DISTINCT(code) AS no_code_entities
 FROM temp_water_domestic
 WHERE code IS NULL;
 
@@ -365,7 +365,7 @@ ADD PRIMARY KEY (code);
 SELECT *
 FROM water_industry
 ORDER BY random()
-limit 5;
+LIMIT 5;
 
 -- B. Extract country country code ('code' column) from country_code table:
 
@@ -395,7 +395,7 @@ FROM temp_water_industry;
 
 -- Double check if there are Null or duplicates values in the column 'code' 
 
-SELECT DISTINCT(code) as no_code_entities
+SELECT DISTINCT(code) AS no_code_entities
 FROM temp_water_industry
 WHERE code IS NULL;
 
