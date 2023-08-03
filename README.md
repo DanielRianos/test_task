@@ -11,10 +11,15 @@ https://drive.google.com/file/d/1GgF1cBUIZFnJoq0eqALN1vF0tCWGUV1f/view?usp=shari
 Data sources:
 
 https://data.worldbank.org/indicator/SP.POP.TOTL 
+
 https://data.worldbank.org/indicator/ER.H2O.FWST.ZS
+
 https://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+
 https://data.worldbank.org/indicator/NY.GDP.PCAP.CD 
+
 https://data.worldbank.org/indicator/ER.H2O.FWDM.ZS 
+
 https://data.worldbank.org/indicator/ER.H2O.FWIN.ZS
 
 
